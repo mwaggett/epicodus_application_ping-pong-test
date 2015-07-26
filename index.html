@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Ping-pong!</h1>
+        <ul id="numbers"></ul>
+        <script>
+            var number = prompt("What number would you like me to ping-pong up to?");
+            var count = 1;
+            var list = ""
+            while (count <= number) {
+                if (count%3 == 0) {
+                    if (count%5 == 0) {
+                        list += "<li>ping-pong</li>";
+                    } else {
+                        list += "<li>ping</li>";
+                    }
+                } else if (count%5 == 0) {
+                    list += "<li>pong</li>";
+                } else {
+                    list += "<li>"+count+"</li>";
+                }
+                count++;
+            }
+            document.getElementById("numbers").innerHTML = list;
+        </script>
+        <p><i>I am aware that I have not handled the case where the user does not enter a number.</i></p>
+    </body>
+</html>
